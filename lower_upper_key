@@ -1,0 +1,34 @@
+[
+  {
+    // unwrap the keys and values into literal
+    // "key" : "A", "value" : "b"
+    "operation": "shift",
+    "spec": {
+      "*": {
+        "$": "&1.key",
+        "@": "&1.value"
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "*": {
+        // Now that the origional key
+        //  is on the "right hand side"
+        //  lowercase it
+        //  upcase it: =toUpper
+        "key": "=toLower"
+      }
+    }
+  },
+  {
+    // pivot back, the now lowercased keys
+    "operation": "shift",
+    "spec": {
+      "*": {
+        "value": "@(1,key)"
+      }
+    }
+  }
+]
