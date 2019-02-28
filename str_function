@@ -1,0 +1,16 @@
+[
+  //calculate length of id's value 
+  {
+    "operation":"modify-default-beta",
+    "spec":{
+      "len":"=size(@(1,id))"
+    }
+  },
+  //concat to field value
+  {
+    "operation":"modify-default-beta",
+    "spec":{
+      "len":"=concat(@(1,field1),@(1,field2))"
+    }
+  }
+]
