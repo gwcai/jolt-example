@@ -1,0 +1,25 @@
+[
+  //add field id,value '48dasdkaskdjlasdlas3948293nf'
+  {
+    "operation":"default",
+    "spec":{
+      "id":"48dasdkaskdjlasdlas3948293nf"
+    }
+  },
+  //delete field id
+  {
+    "operation":"shift",
+    "spec":{
+      "id":null,
+      "*":"&"
+    }
+  },
+  //change field  xxzjbh to id
+  {
+    "operation":"shift",
+    "spec":{
+      "xxzjbh":"id",
+      "*":"&"
+    }
+  }
+]
